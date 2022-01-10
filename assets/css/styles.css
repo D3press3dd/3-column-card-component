@@ -131,6 +131,10 @@ img {
     margin-top: 4vh;
   }
 
+  img {
+    margin-top: 2rem;
+  }
+
   .card-info {
     margin-bottom: 0rem;
   }
