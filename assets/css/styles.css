@@ -1,0 +1,157 @@
+:root {
+  --card-text-color: hsla(0, 0%, 100%, 0.75);
+  --card1-color: hsl(31, 77%, 52%);
+  --card2-color: hsl(184, 100%, 22%);
+  --card3-color: hsl(179, 100%, 13%);
+  --white-text: hsla(0, 0%, 100%, 0.75);
+  --gray-assets: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: var(--white-text);
+  font-family: "Lexend Deca", "Big Shoulders Display", sans-serif;
+  background-color: var(--gray-assets);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 144rem;
+  margin: 8rem 20vw;
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 6rem;
+}
+
+.card {
+  display: flex;
+
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem 4rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--white-text);
+}
+
+.card-info {
+  font-family: "Lexend Deca";
+  color: var(--white-text);
+  line-height: 1.5;
+  font-size: 1.4rem;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.card1 {
+  border-radius: 1rem 0 0 1rem;
+  background-color: var(--card1-color);
+}
+.card2 {
+  background-color: var(--card2-color);
+}
+.card3 {
+  border-radius: 0 1rem 1rem 0;
+  background-color: var(--card3-color);
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  padding: 1rem 2rem;
+  background-color: var(--white-text);
+  margin-bottom: 2rem;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--gray-assets);
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px var(--white-text);
+  transition: all 0.5s;
+}
+
+.btn1 {
+  --card-text-color: hsl(31, 77%, 52%);
+  color: var(--card-text-color);
+}
+.btn2 {
+  --card-text-color: hsl(184, 100%, 22%);
+  color: var(--card-text-color);
+}
+.btn3 {
+  --card-text-color: hsl(179, 100%, 13%);
+  color: var(--card-text-color);
+}
+
+.attribution {
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+@media (max-width: 1070px) {
+  main {
+    margin: 0 4rem;
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 698px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 4rem;
+    margin-top: 4vh;
+  }
+
+  .card-info {
+    margin-bottom: 0rem;
+  }
+
+  .card1 {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .card3 {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 4rem;
+    margin-top: 4vh;
+  }
+
+  .card-info {
+    margin-bottom: 0rem;
+  }
+}
